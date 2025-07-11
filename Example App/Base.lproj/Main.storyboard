@@ -16,20 +16,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbR-KX-yQG">
-                                <rect key="frame" x="152" y="426" width="88" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbR-KX-yQG">
+                                <rect key="frame" x="30" y="188" width="333" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtO-LM-a8I">
+                                <rect key="frame" x="100" y="123" width="193" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Say Hello"/>
+                                <connections>
+                                    <action selector="helloButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HOf-m5-0ey"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="write your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="85S-Xa-rOM">
+                                <rect key="frame" x="30" y="59" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tbR-KX-yQG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="wM8-bG-1yQ"/>
-                            <constraint firstItem="tbR-KX-yQG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xxh-Hc-dSY"/>
+                            <constraint firstItem="FtO-LM-a8I" firstAttribute="top" secondItem="85S-Xa-rOM" secondAttribute="bottom" constant="30" id="Bx9-qC-WgW"/>
+                            <constraint firstItem="tbR-KX-yQG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="QLc-2E-AaU"/>
+                            <constraint firstItem="85S-Xa-rOM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SI7-yd-cSe"/>
+                            <constraint firstItem="FtO-LM-a8I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="W1u-Ud-9jS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="85S-Xa-rOM" secondAttribute="trailing" constant="30" id="exI-BM-Hc2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FtO-LM-a8I" secondAttribute="trailing" constant="100" id="kAr-C7-EaT"/>
+                            <constraint firstItem="85S-Xa-rOM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="lQI-ub-WuD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tbR-KX-yQG" secondAttribute="trailing" constant="30" id="nSg-ZT-wcQ"/>
+                            <constraint firstItem="tbR-KX-yQG" firstAttribute="top" secondItem="FtO-LM-a8I" secondAttribute="bottom" constant="30" id="oV5-ES-caW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="tbR-KX-yQG" id="7rR-zc-F8j"/>
+                        <outlet property="textField" destination="85S-Xa-rOM" id="cyu-Cv-8ie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
